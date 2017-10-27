@@ -84,7 +84,7 @@ module.exports = {
     // We also include JSX as a common component filename extension to support
     // some tools, although we do not recommend using it, see:
     // https://github.com/facebookincubator/create-react-app/issues/290
-    extensions: ['.js', '.json', '.jsx'],
+    extensions: ['.js', '.json', '.jsx', '.re', '.ml'],
     alias: {
       
       // Support React Native Web
@@ -136,6 +136,7 @@ module.exports = {
         exclude: [
           /\.html$/,
           /\.(js|jsx)$/,
+          /\.(re|ml)$/,
           /\.css$/,
           /\.json$/,
           /\.bmp$/,
@@ -206,6 +207,9 @@ module.exports = {
             },
           },
         ],
+      },
+      {
+        test: /\.(re|ml)$/, use: 'bs-loader',
       },
       // ** STOP ** Are you adding a new loader?
       // Remember to add the new extension(s) to the "file" loader exclusion list.
