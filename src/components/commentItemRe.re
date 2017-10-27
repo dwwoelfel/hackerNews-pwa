@@ -3,5 +3,5 @@ external commentItem : ReasonReact.reactClass = "default" [@@bs.module "./Commen
 let make ::_type ::id ::user ::timeAgo ::content children =>
   ReasonReact.wrapJsForReason
     reactClass::commentItem
-    props::{"_type": _type, "id": id, "user": user, "timeAgo": timeAgo, "content": content}
+    props::{"type": _type, "id": id, "user": user, "timeAgo": timeAgo, "content": content}
     children;

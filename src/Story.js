@@ -5,9 +5,6 @@ import Comment from './components/Comment';
 
 import CommentRe from './components/commentRe';
 
-console.log('com', Comment);
-console.log('cre', CommentRe, <CommentRe />);
-
 class Story extends Component {
   componentWillMount() {
     const id = this.props.match.params.id;
